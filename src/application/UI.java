@@ -1,6 +1,6 @@
 package application;
 
-import Xadrez.PecaDeXadrez;
+import xadrez.PecaDeXadrez;
 
 public class UI {
 
@@ -15,6 +15,7 @@ public class UI {
         System.out.println("  a b c d e f g h");
     }
 
+    //Método para mostrar peça no xadrez
     private static void mostraPeca(PecaDeXadrez peca){
         if(peca == null){
             System.out.print("-");
