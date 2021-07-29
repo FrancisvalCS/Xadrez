@@ -24,9 +24,13 @@ public class PartidaDeXadrez {
         return mat;
     }
 
+    private void lugarDaNovaPeca(char coluna, int linha, PecaDeXadrez peca){
+        tabuleiro.localDaPeca(peca, new PosicaoNoXadrez(coluna, linha).paraPosicao());
+    }
+
     //Define a posição inicial das peças ao inicio da partida
     public void setupInicial(){
-        tabuleiro.localDaPeca(new Torre(tabuleiro, Cor.BRANCO), new Posicao(2,1));
-        tabuleiro.localDaPeca(new Rei(tabuleiro, Cor.PRETO), new Posicao(0,4));
+       lugarDaNovaPeca('b',6, new Torre(tabuleiro, Cor.BRANCO));
+       lugarDaNovaPeca('e',1, new Rei(tabuleiro, Cor.PRETO));
     }
 }
