@@ -28,9 +28,28 @@ public class PartidaDeXadrez {
         tabuleiro.localDaPeca(peca, new PosicaoNoXadrez(coluna, linha).paraPosicao());
     }
 
-    //Define a posição inicial das peças ao inicio da partida
+    public void setupInicial(){
+        lugarDaNovaPeca('b', 6, new Torre(tabuleiro, Cor.BRANCO));
+        lugarDaNovaPeca('e', 8, new Rei(tabuleiro, Cor.PRETO));
+        lugarDaNovaPeca('e', 1, new Rei(tabuleiro, Cor.BRANCO));
+        lugarDaNovaPeca('c', 1, new Torre(tabuleiro, Cor.BRANCO));
+        lugarDaNovaPeca('c', 2, new Torre(tabuleiro, Cor.BRANCO));
+        lugarDaNovaPeca('d', 2, new Torre(tabuleiro, Cor.BRANCO));
+        lugarDaNovaPeca('e', 2, new Torre(tabuleiro, Cor.BRANCO));
+        lugarDaNovaPeca('e', 1, new Torre(tabuleiro, Cor.BRANCO));
+        lugarDaNovaPeca('d', 1, new Rei(tabuleiro, Cor.BRANCO));
+
+        lugarDaNovaPeca('c', 7, new Torre(tabuleiro, Cor.PRETO));
+        lugarDaNovaPeca('c', 8, new Torre(tabuleiro, Cor.PRETO));
+        lugarDaNovaPeca('d', 7, new Torre(tabuleiro, Cor.PRETO));
+        lugarDaNovaPeca('e', 7, new Torre(tabuleiro, Cor.PRETO));
+        lugarDaNovaPeca('e', 8, new Torre(tabuleiro, Cor.PRETO));
+        lugarDaNovaPeca('d', 8, new Rei(tabuleiro, Cor.PRETO));
+    }
+
+    /*Define a posição inicial das peças ao inicio da partida
     public void setupInicial(){
        lugarDaNovaPeca('b',6, new Torre(tabuleiro, Cor.BRANCO));
        lugarDaNovaPeca('e',1, new Rei(tabuleiro, Cor.PRETO));
-    }
+    }*/
 }
