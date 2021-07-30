@@ -12,7 +12,7 @@ public class Program {
         Scanner sc = new Scanner(System.in);
 
         PartidaDeXadrez partida = new PartidaDeXadrez();
-        
+
         while(true){
             UI.mostraTabuleiro(partida.getPeca());
             System.out.println();
