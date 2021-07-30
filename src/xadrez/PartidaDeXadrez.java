@@ -29,9 +29,6 @@ public class PartidaDeXadrez {
     }
 
     public void setupInicial(){
-        lugarDaNovaPeca('b', 6, new Torre(tabuleiro, Cor.BRANCO));
-        lugarDaNovaPeca('e', 8, new Rei(tabuleiro, Cor.PRETO));
-        lugarDaNovaPeca('e', 1, new Rei(tabuleiro, Cor.BRANCO));
         lugarDaNovaPeca('c', 1, new Torre(tabuleiro, Cor.BRANCO));
         lugarDaNovaPeca('c', 2, new Torre(tabuleiro, Cor.BRANCO));
         lugarDaNovaPeca('d', 2, new Torre(tabuleiro, Cor.BRANCO));

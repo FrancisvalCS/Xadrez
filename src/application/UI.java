@@ -49,13 +49,6 @@ public class UI {
             System.out.print("-");
         }
         else {
-            System.out.print(peca);
-        }
-        System.out.print(" ");
-        if (peca == null) {
-            System.out.print("-");
-        }
-        else {
             if (peca.getCor() == Cor.BRANCO) {
                 System.out.print(ANSI_BRANCO + peca + ANSI_RESET);
             }
