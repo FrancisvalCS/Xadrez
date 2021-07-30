@@ -2,6 +2,10 @@ package application;
 
 import xadrez.Cor;
 import xadrez.PecaDeXadrez;
+import xadrez.PosicaoNoXadrez;
+
+import java.util.InputMismatchException;
+import java.util.Scanner;
 
 public class UI {
     public static final String ANSI_RESET = "\u001B[0m";
@@ -23,6 +27,17 @@ public class UI {
     public static final String ANSI_CYAN_BACKGROUND = "\u001B[46m";
     public static final String ANSI_BRANCO_BACKGROUND = "\u001B[47m";
 
+    public static PosicaoNoXadrez lerPosicaoNoXadrez(Scanner sc){
+        try {
+            String s = sc.nextLine();
+            char coluna = s.charAt(0);
+            int linha = Integer.parseInt(s.substring(1)); //recorta a string a partir da posição 1 e converte o resultado para inteiro
+            return new PosicaoNoXadrez(coluna, linha);
+        }catch(RuntimeException e){
+            throw new InputMismatchException("Erro ao ler a posição no xadrez, valores válidos são de a1 até a8!");
+        }
+    }
+
     public static void mostraTabuleiro(PecaDeXadrez[][] pecas) {
         for (int i = 0; i < pecas.length; i++) {
             System.out.print((8 - i) + " ");
@@ -33,16 +48,6 @@ public class UI {
         }
         System.out.println("  a b c d e f g h");
     }
-
-    /*Método para mostrar peça no xadrez
-    private static void mostraPeca(PecaDeXadrez peca){
-        if(peca == null){
-            System.out.print("-");
-        }else{
-            System.out.print(peca);
-        }
-        System.out.print(" ");
-    }*/
 
     private static void mostraPeca(PecaDeXadrez peca) {
         if (peca == null) {
